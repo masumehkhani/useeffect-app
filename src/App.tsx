@@ -1,18 +1,19 @@
-import BackCard from "./components/BackCard"
-import LoginForm from "./components/LoginForm"
-import Navbar from "./components/Navbar"
-import {useState} from 'react'
+import Button from "./components/Button";
+import Home from "./components/Home";
+import Navigation from "./components/Navigation";
 
 
 function App() {
-const [isLogin, setIsLogin] = useState(false)
   return (
-    <>
-     <Navbar/>
-     {isLogin && <BackCard/>}
-     {!isLogin && <LoginForm/>}
-    </>
-  )
+    <div className="p-0 m-0">
+    <Navigation/>  
+    <Home/>
+    <Button type="submit">
+      login
+      </Button>
+    
+    </div>
+  );
 }
 
-export default App
+export default App;
